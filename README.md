@@ -31,7 +31,7 @@ Challenge | Category | Points | Remarks
 [quackme up](./Solved/quackme_up) | Reversing | 350 | 
 [quackme](./Solved/quackme) | Reversing | 200 | 
 [Radix's Terminal](./Solved/Radix_s_Terminal) | Reversing | 400 | 
-- | - | - | -
+: | : | : | :
 [caesar cipher 2](./Solved/caesar_cipher_2) | Cryptography | 250 | 
 [Crypto Warmup 1](./Solved/Crypto_Warmup_1) | Cryptography | 75 | 
 [eleCTRic](./Solved/eleCTRic) | Cryptography | 400 | 
@@ -43,7 +43,7 @@ Challenge | Category | Points | Remarks
 [Super Safe RSA 2](./Solved/Super_Safe_RSA_2) | Cryptography | 425 | 
 [Super Safe RSA 3](./Solved/Super_Safe_RSA_3) | Cryptography | 600 | 
 [Super Safe RSA](./Solved/Super_Safe_RSA) | Cryptography | 350 | 
-- | - | - | -
+: | : | : | :
 [Aca-Shell-A](./Solved/Aca_Shell_A) | General Skills | 150 | 
 [environ](./Solved/environ) | General Skills | 150 | 
 [in out error](./Solved/in_out_error) | General Skills | 275 | 
@@ -53,14 +53,14 @@ Challenge | Category | Points | Remarks
 [store](./Solved/store) | General Skills | 400 | 
 [what base is this?](./Solved/what_base_is_this) | General Skills | 200 | 
 [you can't see me](./Solved/you_can_t_see_me) | General Skills | 200 | 
-- | - | - | -
+: | : | : | :
 [core](./Solved/core) | Forensics | 350 | 
 [Desrouleaux](./Solved/Desrouleaux) | Forensics | 150 | 
 [LoadSomeBits](./Solved/LoadSomeBits) | Forensics | 550 | 
 [Malware Shops](./Solved/Malware_Shops) | Forensics | 400 | 
 [Reading Between the Eyes](./Solved/Reading_Between_the_Eyes) | Forensics | 150 | 
 [Recovering From the Snap](./Solved/Recovering_From_the_Snap) | Forensics | 150 | 
-- | - | - | -
+: | : | : | :
 [are you root?](./Solved/are_you_root) | Binary Exploitation | 550 | 
 [authenticate](./Solved/authenticate) | Binary Exploitation | 350 | 
 [buffer overflow 0](./Solved/buffer_overflow_0) | Binary Exploitation | 150 | 
@@ -72,7 +72,7 @@ Challenge | Category | Points | Remarks
 [got-shell?](./Solved/got_shell) | Binary Exploitation | 350 | 
 [rop chain](./Solved/rop_chain) | Binary Exploitation | 350 | 
 [shellcode](./Solved/shellcode) | Binary Exploitation | 200 | 
-- | - | - | -
+: | : | : | :
 [A Simple Question](./Solved/A_Simple_Question) | Web Exploitation | 650 | 
 [Artisinal Handcrafted HTTP 3](./Solved/Artisinal_Handcrafted_HTTP_3) | Web Exploitation | 300 | 
 [fancy-alive-monitoring](./Solved/fancy_alive_monitoring) | Web Exploitation | 400 | 
