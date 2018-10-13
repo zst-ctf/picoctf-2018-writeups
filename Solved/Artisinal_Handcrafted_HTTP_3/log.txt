@@ -1,0 +1,151 @@
+-----------------------------------------
+REQUEST 1
+-----------------------------------------
+GET http://flag.local HTTP/1.1
+Host: flag.local
+Accept: image/gif, image/jpeg, */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+
+-----------------------------------------
+RESPONSE 1
+-----------------------------------------
+
+    HTTP/1.1 200 OK
+    x-powered-by: Express
+    content-type: text/html; charset=utf-8
+    content-length: 321
+    etag: W/"141-LuTf9ny9p1l454tuA3Un+gDFLWo"
+    date: Sat, 06 Oct 2018 08:48:07 GMT
+    connection: close
+
+
+            <html>
+                <head>
+                    <link rel="stylesheet" type="text/css" href="main.css" />
+                </head>
+                <body>
+                    <header>
+                        <h1>Real Business Internal Flag Server</h1>
+                        <a href="/login">Login</a>
+                    </header>
+                    <main>
+                        <p>You need to log in before you can see today's flag.</p>
+                    </main>
+                </body>
+            </html>
+               
+-----------------------------------------
+REQUEST 2
+-----------------------------------------
+
+GET http://flag.local/login HTTP/1.1
+Host: flag.local
+Accept: image/gif, image/jpeg, */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+
+-----------------------------------------
+RESPONSE 2
+-----------------------------------------
+    HTTP/1.1 200 OK
+    x-powered-by: Express
+    content-type: text/html; charset=utf-8
+    content-length: 498
+    etag: W/"1f2-UE5AGAqbLVQn1qrfKFRIqanxl9I"
+    date: Sat, 06 Oct 2018 08:49:26 GMT
+    connection: close
+
+
+            <html>
+                <head>
+                    <link rel="stylesheet" type="text/css" href="main.css" />
+                </head>
+                <body>
+                    <header>
+                        <h1>Real Business Internal Flag Server</h1>
+                        <a href="/login">Login</a>
+                    </header>
+                    <main>
+                        <h2>Log In</h2>
+                        
+                        <form method="POST" action="login">
+                            <input type="text" name="user" placeholder="Username" />
+                            <input type="password" name="pass" placeholder="Password" />
+                            <input type="submit" />
+                        </form>
+                    </main>
+                </body>
+            </html>
+
+-----------------------------------------
+REQUEST 3
+-----------------------------------------
+POST http://flag.local/login HTTP/1.1
+Host: flag.local
+Accept: image/gif, image/jpeg, */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+Content-Length: 38
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+user=realbusinessuser&pass=potoooooooo
+
+-----------------------------------------
+RESPONSE 3
+-----------------------------------------
+    HTTP/1.1 302 Found
+    x-powered-by: Express
+    set-cookie: real_business_token=PHNjcmlwdD5hbGVydCgid2F0Iik8L3NjcmlwdD4%3D; Path=/
+    location: /
+    vary: Accept
+    content-type: text/plain; charset=utf-8
+    content-length: 23
+    date: Sat, 06 Oct 2018 08:56:02 GMT
+    connection: keep-alive
+
+    Found. Redirecting to /
+
+-----------------------------------------
+REQUEST 4
+-----------------------------------------
+GET http://flag.local/ HTTP/1.1
+Host: flag.local
+Accept: image/gif, image/jpeg, */*
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+Cookie: real_business_token=PHNjcmlwdD5hbGVydCgid2F0Iik8L3NjcmlwdD4%3D
+
+-----------------------------------------
+RESPONSE 4
+-----------------------------------------
+    HTTP/1.1 200 OK
+    x-powered-by: Express
+    content-type: text/html; charset=utf-8
+    content-length: 438
+    etag: W/"1b6-bgxSS92CBVm1uJx+NK7DdppIBp8"
+    date: Sat, 06 Oct 2018 08:58:03 GMT
+    connection: close
+
+
+            <html>
+                <head>
+                    <link rel="stylesheet" type="text/css" href="main.css" />
+                </head>
+                <body>
+                    <header>
+                        <h1>Real Business Internal Flag Server</h1>
+                        <div class="user">Real Business Employee</div>
+                        <a href="/logout">Logout</a>
+                    </header>
+                    <main>
+                        <p>Hello <b>Real Business Employee</b>!  Today's flag is: <code>picoCTF{0nLY_Us3_n0N_GmO_xF3r_pR0tOcol5_5f5f}</code>.</p>
+                    </main>
+                </body>
+            </html>

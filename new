@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+import sys
+import os
+
+argv = sys.argv
+script_name = argv.pop(0)
+
+if len(argv) != 3:
+    print(f"Usage: {script_name} challenge_name category points")
+    quit()
+
+challenge = argv[0].strip()
+category = argv[1].strip()
+points = argv[2].strip()
+
+assert points.isdigit() == True
+
+
+if not os.path.exists('./Solved/'):
+    os.makedirs('./Solved/')
+
+if not os.path.exists('./Unsolved/'):
+    os.makedirs('./Unsolved/')
+
+folder = ''.join(c if c.isalnum() else '_' for c in challenge).rstrip('_')
+folder_readme = folder + "/README.md"
+
+already_created = (os.path.exists(folder_readme) or 
+                   os.path.exists('./Solved/' + folder_readme) or
+                   os.path.exists('./Unsolved/' + folder_readme))
+
+if already_created:
+    print('Already created')
+
+else:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+    with open("TEMPLATE.md", 'r') as f:
+        template = f.read()
+
+    with open(folder + "/README.md", 'w') as f2:
+        template = template.replace("CHALLENGE", challenge)
+        template = template.replace("CATEGORY", category)
+        template = template.replace("POINTS", points)
+        f2.write(template)
+
+    with open("README.md", 'a') as f3:
+        f3.write(f'[{challenge}](./Solved/{folder}) | {category} | {points} | \n')
+    

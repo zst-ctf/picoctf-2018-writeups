@@ -1,0 +1,13 @@
+cd secret
+ls
+rm intel_*
+echo 'Drop it in!'
+cd ..
+cd executables
+./dontLookHere
+whoami
+cp /tmp/TopSecret ../passwords
+cd ..
+cd passwords
+ls
+cat TopSecret
