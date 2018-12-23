@@ -1,8 +1,8 @@
 # rsa-madlibs
 Cryptography - 250 points
 
-## Challenge 
-> We ran into some weird puzzles we think may mean something, can you help me solve one? 
+## Challenge
+> We ran into some weird puzzles we think may mean something, can you help me solve one?
 
 > Connect with nc 2018shell2.picoctf.com 18148
 
@@ -13,10 +13,10 @@ A long challenge covering various questions on RSA calculations
 
 1. Y`p * q = n`
 2. `n / p = q`
-3. Not possible - not enough info
+3. Not possible - not enough info. Knowing only e (public key exponent) and n (modulus) cannot help us get p and q which are large prime factors of n since the RSA algorithm is based on the problem of [factoring large integers](https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Integer_factorization_and_RSA_problem).
 4. `phi = (p-1) * (q-1)`
 5. `c = pow(m, e, n)`
-6. Not possible - cuberoot does not yield an integer ([Exploit is when n is very big but e is very small](https://github.com/zst123/gryphonctf-2017-writeups/tree/master/Solved/NoWrap))
+6. Not possible - cuberoot does not yield an integer ([Exploit is when n is very big but e is very small and m is very small](https://github.com/zst123/gryphonctf-2017-writeups/tree/master/Solved/NoWrap)). Again, RSA algorithm is based on the [Integer factorization](https://en.wikipedia.org/wiki/Integer_factorization) and [RSA problem](https://en.wikipedia.org/wiki/RSA_problem) which means that given the modulus, public key exponent and ciphertext, it is difficult to calculate the private key exponent and plaintext.
 7. `d * e == 1 modulo (p-1)(q-1)`
 	- [Source](https://stackoverflow.com/questions/16310871/in-rsa-encryption-how-do-i-find-d-given-p-q-e-and-c)
 	- [Code](https://gist.github.com/ofaurax/6103869014c246f962ab30a513fb5b49)
@@ -45,6 +45,6 @@ Submission
 
 The flag is the plaintext of question 8
 
-	$ python3 8-getflag.py 
+	$ python3 8-getflag.py
 	240109877286251840533272915662757983981706320845661471802585807564915966910385128423526644303028605
 	picoCTF{d0_u_kn0w_th3_w@y_2_RS@_b38be18a}
